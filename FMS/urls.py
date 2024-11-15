@@ -20,8 +20,10 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    # path('', views.home, name='home'),
     path('', include('authentication.urls')),
     path('profile/', include('user_profile.urls')),
     path('campaigns/', include('campaigns.urls')),
+    path('user_management/', include('user_management.urls', namespace='user_management')),
+    path('', include('analytics.urls', namespace='analytics')),
 ]

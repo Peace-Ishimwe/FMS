@@ -1,0 +1,224 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+{% block title %}Funding Analytics{% endblock %}
+
+{% block content %}
+<div class="container mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
+    <h1 class="text-3xl font-bold text-center mb-6">Funding Analytics</h1>
+
+    <!-- Summary Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <!-- Total Contributions Card -->
+        <div class="bg-blue-100 text-black p-4 rounded-lg shadow">
+            <h3 class="text-xl font-semibold">Total Contributions</h3>
+            <p class="text-2xl">{{ campaigns_funded|length }}</p>
+        </div>
+        
+        <!-- Total Funding Amount Card -->
+        <div class="bg-blue-100 text-black p-4 rounded-lg shadow">
+            <h3 class="text-xl font-semibold">Total Funded</h3>
+            <p class="text-2xl">${{ funding_vs_goal|sum_values:"funded"|floatformat:2 }}</p>
+        </div>
+        
+        <!-- Average Contribution Card -->
+        <div class="bg-blue-100 text-black p-4 rounded-lg shadow">
+            <h3 class="text-xl font-semibold">Average Contribution per Campaign</h3>
+            <p class="text-2xl">${{ campaigns_funded|average:"total_funded"|floatformat:2 }}</p>
+        </div>
+    </div>
+
+    <!-- Total Funded Per Campaign Table -->
+    <div class="mb-10">
+        <h2 class="text-xl font-semibold mb-4">Total Funded Per Campaign</h2>
+        <table class="table-auto w-full border-collapse border border-gray-300">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="px-4 py-2">Campaign</th>
+                    <th class="px-4 py-2">Total Funded</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for campaign in campaigns_funded %}
+                <tr>
+                    <td class="border px-4 py-2">{{ campaign.campaign__name }}</td>
+                    <td class="border px-4 py-2">${{ campaign.total_funded|floatformat:2 }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Chart Sections -->
+    <div class="mb-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div>
+            <!-- Campaigns Chart -->
+            <canvas id="campaignsChart" class="mb-8 w-full"></canvas>
+        </div>
+
+        <div>
+            <!-- Monthly Funding Activity Chart -->
+            <canvas id="monthlyFundingChart" class="mb-8 w-full"></canvas>
+        </div>
+
+        <div class="">
+            <!-- Funding Goal vs. Actual Contributions Chart -->
+            <canvas id="fundingGoalChart" class="w-full"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+
+<!-- Render Chart with Django Data -->
+<script>
+    const campaignsData = {{ campaigns_funded|safe }};
+    const labels = campaignsData.map(item => item.campaign__name);
+    const data = campaignsData.map(item => item.total_funded);
+
+    const campaignsChart = new Chart(
+        document.getElementById('campaignsChart').getContext('2d'),
+        {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Total Funded',
+                    data: data,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        }
+    );
+
+    const monthlyFundingData = {{ monthly_funding|safe }};
+    const monthlyLabels = monthlyFundingData.map(item => item.month);
+    const monthlyData = monthlyFundingData.map(item => item.total);
+
+    const monthlyFundingChart = new Chart(
+        document.getElementById('monthlyFundingChart').getContext('2d'),
+        {
+            type: 'line',
+            data: {
+                labels: monthlyLabels,
+                datasets: [{
+                    label: 'Monthly Funding',
+                    data: monthlyData,
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    tension: 0.1,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        }
+    );
+
+    const fundingGoalData = {{ funding_vs_goal|safe }};
+    const goalLabels = fundingGoalData.map(item => item.campaign);
+    const fundedData = fundingGoalData.map(item => item.funded);
+
+    const fundingGoalChart = new Chart(
+        document.getElementById('fundingGoalChart').getContext('2d'),
+        {
+            type: 'doughnut',
+            data: {
+                labels: goalLabels,
+                datasets: [{
+                    label: 'Goal vs Funded',
+                    data: fundedData,
+                    backgroundColor: [
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+            }
+        }
+    );
+</script>
+
+<style>
+    .primary-color { color: #006BFF; }
+    .primary-bg { background-color: #006BFF; }
+    .bg-primary-color { background-color: #006BFF; }
+    .bg-secondary-color { background-color: #FF5733; }
+    .bg-accent-color { background-color: #FFB300; }
+
+    .table-auto {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .table-auto th, .table-auto td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    .table-auto th {
+        background-color: #f3f3f3;
+    }
+
+    .shadow {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .rounded-lg {
+        border-radius: 10px;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    /* Chart styling */
+    canvas {
+        max-width: 100%;
+        height: 300px;  /* Adjust this value as per your preference */
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: 768px) {
+        .grid-cols-1 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .col-span-2 {
+            grid-column: span 2;
+        }
+    }
+
+    .text-center {
+        text-align: center;
+    }
+</style>
+{% endblock %}

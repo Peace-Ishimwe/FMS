@@ -23,7 +23,7 @@
                 <!-- Admin-specific Links -->
                 {% if user.role == 'Admin' %}
                     <a href="{% url 'campaigns:campaign_create' %}" class="primary-color">Create Campaign</a>
-                    {% comment %} <a href="{% url 'user_profile' %}" class="primary-color">Users</a> {% endcomment %}
+                    <a href="{% url 'user_management:user_list' %}" class="primary-color">Users</a>
                 {% endif %}
             </div>
             <div class="flex items-center gap-4">

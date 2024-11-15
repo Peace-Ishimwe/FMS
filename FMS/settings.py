@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'FMS',
     'authentication',
     'user_profile',
-    'campaigns'
+    'campaigns',
+    'user_management',
+    'analytics'
 ]
 
 MIDDLEWARE = [
