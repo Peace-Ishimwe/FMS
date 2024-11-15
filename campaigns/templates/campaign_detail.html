@@ -6,7 +6,9 @@
 <div class="max-w-4xl mx-auto p-8 mt-10 bg-white rounded-lg shadow-md">
  <div class="flex items-center justify-between mb-6">
   <h1 class="text-3xl font-bold text-center text-primary-color">{{ campaign.name }}</h1>
+  {% if user.role == 'Admin' %}
   <a href="{% url 'campaigns:campaign_update' campaign.id %}" class="primary-bg text-white px-4 py-2 rounded">Edit</a>
+  {% endif %}
  </div>
   <div class="space-y-4 flex flex-wrap gap-x-8">
     <div>
