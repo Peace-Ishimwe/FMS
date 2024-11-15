@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}User Dashboard{% endblock %}
+
+{% block content %}
+    <h2 class="text-3xl font-bold text-center primary-color">Welcome, {{ user.first_name }}</h2>
+    <p class="text-center text-gray-600 mt-4">You can see your funding history and more here.</p>
+
+    <div class="mt-8">
+        <h3 class="text-xl font-semibold text-gray-700">Your Funded Campaigns</h3>
+        <table class="min-w-full mt-4 table-auto border-collapse border border-gray-300">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2 border">Campaign Name</th>
+                    <th class="px-4 py-2 border">Amount Funded</th>
+                    <th class="px-4 py-2 border">Funded At</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for funding in user.fundings.all %}
+                    <tr>
+                        <td class="px-4 py-2 border">{{ funding.campaign.name }}</td>
+                        <td class="px-4 py-2 border">${{ funding.amount }}</td>
+                        <td class="px-4 py-2 border">{{ funding.funded_at }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

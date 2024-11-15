@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto mt-12">
+        <h2 class="text-3xl font-bold text-center primary-color">Welcome, {{ user.first_name }}</h2>
+        <p class="text-center text-gray-600 mt-4">This is your dashboard.</p>
+
+        {% if user.role == 'admin' %}
+            <!-- Admin-specific content -->
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold text-gray-700">Admin Overview</h3>
+                <p class="text-gray-600 mt-4">As an admin, you can manage campaigns, users, and view system reports.</p>
+                <div class="mt-6">
+                    <a href="" class="primary-bg text-white px-6 py-3 rounded-md">Admin Dashboard</a>
+                    <a href="" class="primary-bg text-white px-6 py-3 rounded-md ml-4">Manage Users</a>
+                </div>
+            </div>
+        {% else %}
+            <!-- User-specific content -->
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold text-gray-700">Your Funding Activity</h3>
+                <p class="text-gray-600 mt-4">You can see your funded campaigns and how you're making an impact.</p>
+                <div class="mt-6">
+                    <a href="" class="primary-bg text-white px-6 py-3 rounded-md">View My Funded Campaigns</a>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

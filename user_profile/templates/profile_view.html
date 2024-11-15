@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+{% load form_tags %} 
+
+<div class="max-w-4xl mx-auto p-8 mt-10 bg-white rounded-lg shadow-md">
+  <h1 class="text-3xl font-bold text-center text-primary-color mb-6">
+    Your Profile
+  </h1>
+
+  <div class="space-y-4">
+    <div>
+      <h3 class="font-semibold text-gray-700">Name</h3>
+      <p class="text-gray-600">{{ user.first_name }} {{ user.last_name }}</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-gray-700">Email</h3>
+      <p class="text-gray-600">{{ user.email }}</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-gray-700">Phone</h3>
+      <p class="text-gray-600">{{ user.phone }}</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-gray-700">Province</h3>
+      <p class="text-gray-600">{{ user.province }}</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-gray-700">Sector</h3>
+      <p class="text-gray-600">{{ user.sector }}</p>
+    </div>
+  </div>
+
+  <div class="mt-6 flex justify-between">
+    <a
+      href="{% url 'edit_profile' %}"
+      class="primary-bg text-white px-4 py-2 rounded"
+      >Edit Profile</a
+    >
+    <a
+      href="{% url 'change_password' %}"
+      class="primary-bg text-white px-4 py-2 rounded"
+      >Change Password</a
+    >
+    <a href="{% url 'delete_account' %}" class="text-red-600 hover:text-red-800"
+      >Delete Account</a
+    >
+  </div>
+</div>
+
+{% endblock %}
