@@ -1,0 +1,20 @@
+<!-- templates/campaigns/campaign_update_form.html -->
+{% extends 'base.html' %}
+
+{% block title %}Edit Campaign{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto p-8 mt-10 bg-white rounded-lg shadow-md">
+    <h1 class="text-3xl font-bold text-center primary-color mb-6">Edit Campaign</h1>
+
+    <form method="POST" class="space-y-6">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <div class="flex justify-between">
+            <button type="submit" class="primary-bg text-white px-4 py-2 rounded">Update Campaign</button>
+            <a href="{% url 'campaigns:campaign_detail' campaign.id %}" class="text-gray-500 hover:text-gray-700">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

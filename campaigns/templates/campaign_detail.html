@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Campaign Details{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto p-8 mt-10 bg-white rounded-lg shadow-md">
+ <div class="flex items-center justify-between mb-6">
+  <h1 class="text-3xl font-bold text-center text-primary-color">{{ campaign.name }}</h1>
+  <a href="{% url 'campaigns:campaign_update' campaign.id %}" class="primary-bg text-white px-4 py-2 rounded">Edit</a>
+ </div>
+  <div class="space-y-4 flex flex-wrap gap-x-8">
+    <div>
+      <h3 class="font-semibold text-gray-700">Description</h3>
+      <p class="text-gray-600">{{ campaign.description }}</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-gray-700">Goal Amount</h3>
+      <p class="text-gray-600">${{ campaign.goal_amount }}</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-gray-700">Total Funded</h3>
+      <p class="text-gray-600">${{ total_funded }}</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-gray-700">Created By</h3>
+      <p class="text-gray-600">{{ campaign.created_by.first_name }} {{ campaign.created_by.last_name }}</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-gray-700">Created At</h3>
+      <p class="text-gray-600">{{ campaign.created_at|date:"M d, Y" }}</p>
+    </div>
+  </div>
+
+  <!-- Funding Form -->
+  <div class="mt-6">
+    <h2 class="text-2xl font-bold text-center text-primary-color mb-4">Fund this Campaign</h2>
+    <form method="POST" class="space-y-4">
+      {% csrf_token %}
+      {{ form.amount.label_tag }}
+      {{ form.amount }}
+     <div class="flex items-center justify-between mt-6">
+      <button type="submit" class="primary-bg text-white px-4 py-2 rounded">Contribute</button>
+      <div class="">
+        <a href="{% url 'campaigns:campaign_list' %}" class="primary-bg text-white px-4 py-3 rounded">Back to Campaigns</a>
+      </div>
+     </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

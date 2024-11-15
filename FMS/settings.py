@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'FMS',
     'authentication',
-    'user_profile'
+    'user_profile',
+    'campaigns'
 ]
 
 MIDDLEWARE = [
