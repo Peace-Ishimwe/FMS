@@ -43,9 +43,75 @@ The Fundraising Management System provides users with a platform to create and s
 - **Libraries**: Django templating system, Tailwind CSS (via CDN)
 
 ## Installation
-To get started with this project, clone the repository and set up the necessary dependencies.
 
-### Set up a virtual environment:
-```bash
-python3 -m venv venv
-source venv/bin/activate
+1. Clone the repository:
+git clone https://github.com/yourusername/fundraising-management-system.git
+cd fundraising-management-system
+
+2. Create a virtual environment and activate it:
+bash
+Copy code
+python -m venv env
+# For Windows
+env\Scripts\activate
+# For macOS/Linux
+source env/bin/activate
+
+3. Install the required dependencies:
+bash
+Copy code
+pip install -r requirements.txt
+
+4. Install and configure Tailwind CSS:
+bash
+Copy code
+npm install -g tailwindcss
+tailwindcss init
+
+5. Run Tailwind CSS to watch for changes in styles:
+bash
+Copy code
+tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch
+
+## Database Setup
+Create a PostgreSQL database:
+sql
+Copy code
+CREATE DATABASE fundraising_db;
+
+Update the DATABASES section in the settings.py file:
+python
+Copy code
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'fundraising_db',
+        'USER': 'your_postgresql_username',
+        'PASSWORD': 'your_postgresql_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
+Apply migrations:
+bash
+Copy code
+python manage.py makemigrations
+python manage.py migrate
+
+Create a superuser for admin access:
+bash
+Copy code
+python manage.py createsuperuser
+
+## Usage
+Start the development server:
+bash
+Copy code
+python manage.py runserver
+Open your browser and navigate to http://127.0.0.1:8000.
+
+Log in using the superuser credentials or register as a new user.
+
+
+## Author: Munyaneza Ishimwe Peace
