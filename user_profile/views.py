@@ -10,7 +10,6 @@ from authentication.models import CustomUser
 def profile_view(request):
     user = request.user
     user_profile = CustomUser.objects.get(email=user)
-    print(user_profile)
     
     return render(request, 'profile_view.html', {'user': user, 'user_profile': user_profile})
 

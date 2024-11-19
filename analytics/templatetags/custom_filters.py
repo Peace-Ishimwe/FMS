@@ -26,6 +26,5 @@ def pluck(queryset, field):
         elif hasattr(item, field):  # If item is an object
             result.append(getattr(item, field, None))
             
-    print(result)
     return result
 

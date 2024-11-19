@@ -7,10 +7,8 @@ from django.db.models import Sum, F
 @login_required
 def funding_analytics(request):
     user = request.user
-
     # Data Preparation
     funding_data = Funding.objects.filter(user=user).select_related('campaign')
-    
     # Total funded per campaign
     campaigns_funded = funding_data.values('campaign__name').annotate(
         total_funded=Sum('amount')
@@ -68,5 +66,4 @@ def funding_analytics(request):
         'monthly_funding': monthly_funding_data,
         'funding_vs_goal': funding_vs_goal_data
     }
-    print(context)
     return render(request, 'funding_analytics.html', context)

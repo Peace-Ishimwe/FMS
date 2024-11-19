@@ -8,7 +8,6 @@ def register_view(request):
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-            print(user)
             if not CustomUser.objects.exists():
                 user.role = 'Admin'
             else:
