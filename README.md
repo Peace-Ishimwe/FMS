@@ -45,7 +45,7 @@ The Fundraising Management System provides users with a platform to create and s
 ## Installation
 
 1. Clone the repository:
-git clone https://github.com/yourusername/fundraising-management-system.git
+git clone https://github.com/peace-ishimwe/FMS.git
 cd fundraising-management-system
 
 2. Create a virtual environment and activate it:
