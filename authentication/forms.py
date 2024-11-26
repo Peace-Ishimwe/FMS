@@ -22,6 +22,6 @@ class UserRegistrationForm(UserCreationForm):
 
 class UserLoginForm(AuthenticationForm):
     username = forms.EmailField(label='Email', widget=forms.EmailInput(
-        attrs={'class': 'block w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500'}))
+        attrs={'class': 'bloc kw-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500'}))
     password = forms.CharField(widget=forms.PasswordInput(
         attrs={'class': 'block w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500'}))

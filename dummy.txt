@@ -1,0 +1,878 @@
+docker ps
+    2  exit
+    3  lsof -i:7500
+    4  docker ps
+    5  docker logs b0747a7176fa
+    6  su -i -u postgres
+    7  psql -U postgres
+    8  exit
+    9  clear
+   10  psql -U postgres
+   11  docker ps
+   12  docker ps -a
+   13  docker logs 76353d3a14dc
+   14  docker restart 76353d3a14dc
+   15  docker ps
+   16  ufw status
+   17  docker ps
+   18  exit
+   19  docker ps
+   20  psql -U postgres
+   21  exit
+   22  docker ps
+   23  docker logs 8274672be0de
+   24  docker logs b03577e84068
+   25  dir 
+   26  cd nova
+   27  ls
+   28  cd novamis
+   29  ls
+   30  cd Frontend-Nova
+   31  ls
+   32  cd  nova
+   33  ls
+   34  cd novamis
+   35  cd Frontend-Nova
+   36  pnpm status
+   37  cd /opt
+   38  cd uploads
+   39  cd /opt/uploads/educapp-backend
+   40  dir
+   41  cd containerd
+   42  dir
+   43  cd ../
+   44  dir
+   45  cd educable-dir
+   46  dir
+   47  cd ../opt
+   48  dir
+   49  cd ../educable-dir/images
+   50  dir
+   51  cd prod
+   52  dir
+   53  clear
+   54  cd ../
+   55  dir
+   56  exit
+   57  docker system df
+   58  clear
+   59  docker system df
+   60  docker ps 
+   61  docker system prune -f
+   62  cd /home
+   63  ls
+   64  docker system df
+   65  docker system prune -f
+   66  docke rsystem df
+   67  docker system df
+   68  docker prune images -f
+   69  docker system prune -f
+   70  clear
+   71  ls
+   72  du -sh .
+   73  cd ~/nextjs-builds
+   74  ls
+   75  s
+   76  ls
+   77  cd  ..
+   78  pm2 status
+   79  df -h
+   80  pm2 logs
+   81  pm2 logs -f
+   82  cd ~/actions-runner/_work/rca_app/rca_app/prod-branch
+   83  ls
+   84  ls -a
+   85  ls -a -l
+   86  git pull
+   87  pm2 status
+   88  doc
+   89  cleaar
+   90  clear
+   91  docker ps
+   92  ufw
+   93  clear
+   94  ls
+   95  pm2 status
+   96  sudo -u postgres psql
+   97  sudo -u rca_user
+   98  clear
+   99  sudo -u rca_user psql
+  100  sudo -u educable psql
+  101  sudo -u root psql
+  102  cd stock
+  103  ls
+  104  docker-compose up -d
+  105  docker compose up -d
+  106  clear
+  107  sudo apt install docker-compose-plugin
+  108  sudo apt update
+  109  clear
+  110  sudo apt install docker-compose-plugin
+  111  docker --version
+  112  cls
+  113  clear
+  114  cd stock
+  115  ls
+  116  docker compose up 
+  117  docker 
+  118  clear
+  119  cd stock 
+  120  ls
+  121  docker compose -f docker-compose.yml up -d
+  122  clear
+  123  ^[[200~docker-compose --version
+  124  docker-compose --version\n
+  125  claer
+  126  clear
+  127  docker compose -f docker-compose.yml up -d
+  128  clear
+  129  docker --version
+  130  docker compose up -d\n
+  131  clear
+  132  sudo apt install docker-compose-plugin
+  133  docker-compose version\n
+  134  sudo apt update\n
+  135  clear
+  136  sudo curl -L "https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose\n
+  137  sudo chmod +x /usr/local/bin/docker-compose\n
+  138  docker-compose version\n
+  139  docker-compose up -d\n
+  140  docker compose --version
+  141  docker compose up -d
+  142  clear
+  143  docker ps\n
+  144  docker-compose up -d
+  145  docker logs stock-api
+  146  clear
+  147  docker logs stock-api
+  148  cd stock
+  149  docker logs stock-api
+  150  cat docker-compose.yml
+  151  clear
+  152  docker logs stock-api
+  153  docker-compose pull -q\n
+  154  clear
+  155  docker-compose pull -q\n
+  156  clear
+  157  docker-compose pull
+  158  docker logs stock-api
+  159  clear
+  160  docker logs stock-api
+  161  clear
+  162  docker-compose up
+  163  cd stock
+  164  docker logs stock-api
+  165  ls
+  166  cd stock
+  167  clear
+  168  ls
+  169  cd nova
+  170  ls
+  171  cd novamis
+  172  cd Frontend-Nova/
+  173  pnpm2 status
+  174  pnpm status
+  175  pnpm start
+  176  pnpm exec next dev -p 3030
+  177  cd stock
+  178  docker logs stock-api
+  179  clear
+  180  cd cryptavita
+  181  docker logs ziba-api
+  182  clear
+  183  docker logs ziba-api
+  184  clear
+  185  docker-compse up 
+  186  cd cryptavita
+  187  clear
+  188  docker-compse up 
+  189  ls
+  190  docker-compose version
+  191  docker logs ziba-api
+  192  docker-compose up
+  193  docker-compose version
+  194  clear
+  195  docker logs ziba-api
+  196  cat docker-compose.yml
+  197  docker logs ziba-api
+  198  sudo nano /etc/apt/sources.list\n
+  199  \cd actions-runner/bin.2.319.
+  200  cd actions-runner
+  201  ls
+  202  cd _work
+  203  ls
+  204  cd rca_app
+  205  ls
+  206  cd rca_app
+  207  ls
+  208  cd prod-branch
+  209  ls
+  210  cd ..
+  211  ls
+  212  cd ..
+  213  ls
+  214  cd ..
+  215  xitl
+  216  exit
+  217  uptime
+  218  ls
+  219  less database
+  220  less database.sql
+  221  cat apps
+  222  cd apps
+  223  ls
+  224  cat database.sql
+  225  cat database
+  226  cd ..
+  227  cat database
+  228  cat database.sql
+  229  cd actions-runner
+  230  ls
+  231  cd ..
+  232  cd educable
+  233  cd bruno
+  234  ls
+  235  cd doc-review-upload
+  236  cd ..
+  237  cd doc-review-upload
+  238  ls
+  239  cd ..
+  240  cd apps
+  241  ls
+  242  cd rcamis
+  243  ls
+  244  cd rca-website
+  245  ls
+  246  pwd
+  247  cd ..
+  248  ls
+  249  ls -a
+  250  cat .env.local
+  251  cd ..
+  252  ls
+  253  cd ..
+  254  history
+  255  ls
+  256  cd var
+  257  ls -a
+  258  cd apps
+  259  ls -a
+  260  cd ..
+  261  cd bruno
+  262  ls -a
+  263  cd ..
+  264  cd .confi
+  265  cd .config
+  266  ls
+  267  cat database.sql
+  268  cd ..
+  269  last
+  270  who
+  271  less /var/log/auth.log
+  272  grep "Nov  2" /var/log/syslog
+  273  grep "Nov  2" /var/log/auth.log
+  274  grep "$(date '+%b %d')"
+  275  last | grep "$(date '+%b %d')" | awk '{print $1}' | sort | uniq
+  276  last | grep 'ssh' | awk '$4 >= 18 || $5 == "PM"'
+  277  awk '/Accepted publickey/ || /Accepted password/ {if ($3 == "Nov" && $4 == "02") if ($5 >= "18:00") print $0}' /var/log/auth.log
+  278  ls
+  279  cd var
+  280  cd /var
+  281  ls
+  282  cd log
+  283  ls
+  284  cat auth.log
+  285  less auth.log
+  286  less secure
+  287  grep "Accepted" auth.log
+  288  \tgetent passwd root
+  289  groups root
+  290  \tlast root
+  291  sudo less /var/log/secure
+  292  whois 105.178.104.46
+  293  ls
+  294  cd apps
+  295  ls
+  296  cd v2
+  297  ls
+  298  cd ..
+  299  cd rcamis
+  300  ls
+  301  cd rca-website
+  302  pwd
+  303  dfdf
+  304  sudo su
+  305  sudo apt install sysstat -y
+  306  sudo nano /etc/default/sysstat
+  307  sudo systemctl enable sysstat
+  308  sudo systemctl start sysstat
+  309  exit
+  310  htop
+  311  systemctl list-units --type=service\n
+  312  clear
+  313  docker ps
+  314  ls
+  315  sudo find / -type f -name "*.java"\n
+  316  clear
+  317  find java
+  318  clear
+  319  find java
+  320  sudo find java
+  321  sudo find / -type f -name "*.java"\n
+  322  clear
+  323  history 
+  324  ls
+  325  cd ..
+  326  ls
+  327  cd ..
+  328  ls
+  329  cd ..
+  330  ls
+  331  cd ..
+  332  ls
+  333  lcd /
+  334  cd  /
+  335  ls
+  336  cd home
+  337  ls
+  338  cd ..
+  339  ls
+  340  ls -la
+  341  cd root
+  342  ls
+  343  cd apps
+  344  ls
+  345  cd rcamis
+  346  ls
+  347  cd rca-website
+  348  ls -la
+  349  cat .env
+  350  clear
+  351  pm2 list
+  352  pm2 delete nova-frontend\n
+  353  pm2 delete nextjs-app 
+  354  pm2 delete  nova-frontend 
+  355  clear
+  356  pm2 status
+  357  pm2 info 17 
+  358  pm2 info 16 
+  359  cd ~/root/actions-runner │\n
+  360  history 
+  361  clear
+  362  ls
+  363  ls -la
+  364  cat .env.local
+  365  cd src 
+  366  ls
+  367  cd app
+  368  pm2 status
+  369  pm2 save
+  370  clear
+  371  pm2 stop mis_prod
+  372  pm2 start mis_prod
+  373  pm2 restart all
+  374  clear
+  375  pm2 list
+  376  ls
+  377  pm2 describe 17 
+  378  lsof -i :9099\n
+  379  netstat -tulnp | grep 9099\n
+  380  clear
+  381  pm2 info 16
+  382  cd ..
+  383  ls
+  384  cd ..
+  385  ls
+  386  ls -la
+  387  cat Dockerfile
+  388  netstat -tulnp | grep 6543
+  389  ps -p 221855 -o args=\n
+  390  cd /usr/bin/docker-proxy
+  391  ls -l /usr/bin/docker-proxy\n
+  392  pwdx 221855\n
+  393  cd /
+  394  ls
+  395  cd usr
+  396  cd bin 
+  397  ls
+  398  cat docker-proxy\n
+  399  clear
+  400  pm2 status
+  401  pm2 delete ganira-app
+  402  pm2 save
+  403  clear
+
+
+
+   List of relations
+ Schema |            Name            | Type  |  Owner   
+--------+----------------------------+-------+----------
+ public | academic_appeal            | table | postgres
+ public | academic_mark              | table | postgres
+ public | academic_year              | table | postgres
+ public | academic_year_teachers     | table | postgres
+ public | academic_year_terms        | table | postgres
+ public | addresses                  | table | postgres
+ public | class_academic_years       | table | postgres
+ public | classes                    | table | postgres
+ public | classes_courses            | table | postgres
+ public | classes_terms              | table | postgres
+ public | comments                   | table | postgres
+ public | courses                    | table | postgres
+ public | courses_academic_years     | table | postgres
+ public | courses_term               | table | postgres
+ public | discipline_appeals         | table | postgres
+ public | discipline_marks_reduction | table | postgres
+ public | news                       | table | postgres
+ public | parent                     | table | postgres
+ public | projects                   | table | postgres
+ public | roles                      | table | postgres
+ public | staff_members              | table | postgres
+ public | staff_members_terms        | table | postgres
+ public | student                    | table | postgres
+ public | student_academic_years     | table | postgres
+ public | student_class              | table | postgres
+ public | student_courses            | table | postgres
+ public | students                   | table | postgres
+ public | students_parents           | table | postgres
+ public | teacher_classes            | table | postgres
+ public | teacher_courses            | table | postgres
+ public | teachers                   | table | postgres
+ public | terms                      | table | postgres
+ public | user_roles                 | table | postgres
+ public | users                      | table | postgres
+ public | web_content                | table | postgres
+(35 rows)
+
+
+{
+    "success": true,
+    "message": "Successfully fetched all teachers",
+    "data": [
+        {
+            "createdAt": "2023-12-10 15:19:53",
+            "updatedAt": "2023-12-10 16:01:17",
+            "id": "ce34e1d2-2748-4318-8220-4e043c07ecba",
+            "firstName": "MUKASHEMA",
+            "lastName": "Benilde",
+            "email": "mubenilde17@gmail.com",
+            "lastLogin": null,
+            "gender": "FEMALE",
+            "phoneNumber": "+250 783 872 295",
+            "nationalId": "343343242323232323",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-10 15:19:53",
+                "updatedAt": "2023-12-10 15:19:53",
+                "id": "01c0236c-e49c-4287-a1cc-b7b037c3e368",
+                "country": "RWANDA",
+                "province": "South",
+                "district": "Kamonyi",
+                "sector": "Gacurabwenge",
+                "cell": "Kigembe",
+                "village": "Mushimba"
+            }
+        },
+        {
+            "createdAt": "2023-12-08 10:01:14",
+            "updatedAt": "2023-12-11 09:43:36",
+            "id": "03146fc6-2cff-46dc-a5ca-28cee51a1e02",
+            "firstName": "Stanely",
+            "lastName": "Mwizerwa",
+            "email": "stanleymwizerwa@gmail.com",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "250788683008",
+            "nationalId": "1198480006508051",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-08 10:01:14",
+                "updatedAt": "2023-12-08 10:01:14",
+                "id": "0995e817-bf4b-4fd3-98f3-800faf7cda3b",
+                "country": "Rwanda",
+                "province": "Kigali",
+                "district": "Gasabo",
+                "sector": "Ndera",
+                "cell": "Masoro",
+                "village": "Byimana"
+            }
+        },
+        {
+            "createdAt": "2023-12-07 21:42:56",
+            "updatedAt": "2023-12-22 10:25:07",
+            "id": "82413cb6-8595-407c-807a-563654923a70",
+            "firstName": "Egide",
+            "lastName": "NSABYIMANA ",
+            "email": "ensabyimana@rca.ac.rw",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "0783500614",
+            "nationalId": "",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-07 21:42:56",
+                "updatedAt": "2023-12-07 21:42:56",
+                "id": "8a913427-4db5-4078-af5e-dde074cc8cbf",
+                "country": "RWANDA",
+                "province": "Kigali city",
+                "district": "Gasabo District",
+                "sector": "Bumbogo",
+                "cell": "Musave",
+                "village": "Kayumba"
+            }
+        },
+        {
+            "createdAt": "2023-12-07 21:53:56",
+            "updatedAt": "2023-12-08 08:52:59",
+            "id": "e0a2d289-76df-4120-bb9d-1772a6d2db06",
+            "firstName": "Jean Bosco",
+            "lastName": "Uwitonze",
+            "email": "uwjbosco@gmail.com",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "0788425619",
+            "nationalId": "",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-07 21:51:56",
+                "updatedAt": "2023-12-07 21:51:56",
+                "id": "fa84ee08-0d0e-48fa-b40d-1de4d750d3a2",
+                "country": "RWANDA",
+                "province": "Kigali city",
+                "district": "Kicukiro",
+                "sector": "Gatenga",
+                "cell": "Nyarurama",
+                "village": "Nyabikenke"
+            }
+        },
+        {
+            "createdAt": "2023-12-08 13:28:26",
+            "updatedAt": "2023-12-08 16:56:42",
+            "id": "67274117-4648-4bef-a2a4-9eb4c9bf9189",
+            "firstName": "BAZIRAMWABO",
+            "lastName": "Gabriel",
+            "email": "gbaziramwabo@gmail.com",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "0788862399",
+            "nationalId": "1197780003689050",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-08 13:28:26",
+                "updatedAt": "2023-12-08 13:28:26",
+                "id": "13af2183-b48c-4406-a953-4fa03f983d0b",
+                "country": "Rwanda",
+                "province": "Kigali",
+                "district": "Gasabo",
+                "sector": "Remera",
+                "cell": "Nyabisindu",
+                "village": "Nyabisindu"
+            }
+        },
+        {
+            "createdAt": "2023-12-07 21:38:21",
+            "updatedAt": "2023-12-25 00:28:39",
+            "id": "faf8cec6-6395-4de9-975a-de8f911863da",
+            "firstName": "Aphrodice",
+            "lastName": "RWAGAJU",
+            "email": "aphrorwa@gmail.com",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "+250788458261",
+            "nationalId": "1198280006977132",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-07 21:38:21",
+                "updatedAt": "2023-12-07 21:38:21",
+                "id": "231425e9-2324-4804-9800-71609b12967e",
+                "country": "Rwanda",
+                "province": "Kigali",
+                "district": "Nyarugenge",
+                "sector": "Kigali",
+                "cell": "Kigali",
+                "village": "Murama"
+            }
+        },
+        {
+            "createdAt": "2023-12-08 11:19:45",
+            "updatedAt": "2023-12-09 11:37:27",
+            "id": "c75e9f2d-2af9-481f-b61a-c21ab99b4e18",
+            "firstName": "awet",
+            "lastName": "fesseha",
+            "email": "awet.fesseha1@gmail.com",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "0791375087",
+            "nationalId": "3197980139398077",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-08 11:19:45",
+                "updatedAt": "2023-12-08 11:19:45",
+                "id": "5a1423cf-bbc5-466b-b887-8f1e32210c11",
+                "country": "Rwanda",
+                "province": "North",
+                "district": "Musanze",
+                "sector": "Muhoza",
+                "cell": "Cyabararika",
+                "village": "Bwuzuri"
+            }
+        },
+        {
+            "createdAt": "2023-12-07 21:42:58",
+            "updatedAt": "2023-12-16 08:24:50",
+            "id": "27b78b4b-1788-489c-88e9-7a483fb24122",
+            "firstName": "Jean Damascene ",
+            "lastName": "HABANABASHAKA",
+            "email": "damascene10@gmail.com",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "0788843646",
+            "nationalId": "",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-07 21:42:58",
+                "updatedAt": "2023-12-07 21:42:58",
+                "id": "9c66a574-fa65-4fb3-9a4f-b58be4287ac1",
+                "country": "RWANDA",
+                "province": "Northen",
+                "district": "Musanze",
+                "sector": "Muhoza",
+                "cell": "Ruhengeri",
+                "village": "Muhe"
+            }
+        },
+        {
+            "createdAt": "2023-12-07 21:42:54",
+            "updatedAt": "2024-07-10 01:33:59",
+            "id": "0d2fe9bc-57d2-4b48-8ccd-385d92e0adf8",
+            "firstName": "Celestin",
+            "lastName": "NZEYIMANA",
+            "email": "ingabo1234@gmail.com",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "0783137121",
+            "nationalId": "",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-07 21:42:54",
+                "updatedAt": "2023-12-07 21:42:54",
+                "id": "dde2eb87-aae1-4f79-a5e8-b6d1841c7444",
+                "country": "RWANDA",
+                "province": "Northen",
+                "district": "Musanze",
+                "sector": "Cyuve",
+                "cell": "Rwebeya",
+                "village": "Nyarubande"
+            }
+        },
+        {
+            "createdAt": "2023-12-07 21:42:52",
+            "updatedAt": "2024-07-10 01:34:51",
+            "id": "6fedd587-694a-4488-ac70-1ad23b6f586a",
+            "firstName": "HILAIRE",
+            "lastName": "HATANGIMBABAZI",
+            "email": "hatahila@gmail.com",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "0788432967",
+            "nationalId": "",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-07 21:42:52",
+                "updatedAt": "2023-12-07 21:42:52",
+                "id": "5a367d9e-2804-4472-8ec7-91ffb935be90",
+                "country": "RWANDA",
+                "province": "Western",
+                "district": "Bugesera",
+                "sector": "Mayange",
+                "cell": "Kagenge",
+                "village": "Gitaramuka"
+            }
+        },
+        {
+            "createdAt": "2023-12-07 21:42:55",
+            "updatedAt": "2024-07-10 01:35:22",
+            "id": "4efa7657-01e8-4b89-9dbc-bb66f0cb60c1",
+            "firstName": "NDIZEYE ",
+            "lastName": "Alphonse ",
+            "email": "alphandi80@gmail.com",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "0788698726",
+            "nationalId": "",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-07 21:42:55",
+                "updatedAt": "2023-12-07 21:42:55",
+                "id": "f359d045-198a-4b07-a9f0-e1ab8800c093",
+                "country": "RWANDA",
+                "province": "Kigali city",
+                "district": "Gasabo ",
+                "sector": "Jabana",
+                "cell": "Bweramvura ",
+                "village": "Gitega"
+            }
+        },
+        {
+            "createdAt": "2023-12-07 21:43:00",
+            "updatedAt": "2024-07-10 01:36:14",
+            "id": "f245ecbd-06d5-4fc6-8a07-064a2dbe38f0",
+            "firstName": "Larisse",
+            "lastName": "MUSANINYANGE MAHORO",
+            "email": "larimahoro@gmail.com",
+            "lastLogin": null,
+            "gender": "FEMALE",
+            "phoneNumber": "0782513828",
+            "nationalId": "",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-07 21:43:00",
+                "updatedAt": "2023-12-07 21:43:00",
+                "id": "df91317b-167e-4e94-853b-1b80f8910c26",
+                "country": "RWANDA",
+                "province": "Eastern",
+                "district": "Bugesera",
+                "sector": "Nyamata",
+                "cell": "Nyamata ville",
+                "village": "Rwakibirizi"
+            }
+        },
+        {
+            "createdAt": "2023-12-08 10:16:39",
+            "updatedAt": "2024-07-10 01:37:20",
+            "id": "bd03dc40-f74b-4e56-b568-dc522e412554",
+            "firstName": "HABYARIMANA",
+            "lastName": "Projecte",
+            "email": "prohaby2000@gmail.com",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "+250788551771",
+            "nationalId": "1198280079451010",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-08 10:16:39",
+                "updatedAt": "2023-12-08 10:16:39",
+                "id": "707f573f-d176-4f8e-8495-082ba3f66e0a",
+                "country": "Rwanda",
+                "province": "Kigali",
+                "district": "Kicukiro",
+                "sector": "Kagarama",
+                "cell": "Muyange",
+                "village": "Muyange"
+            }
+        },
+        {
+            "createdAt": "2023-12-08 08:59:00",
+            "updatedAt": "2024-07-10 01:38:17",
+            "id": "2e4d1869-4e2c-4e20-ab2d-993a50aa643c",
+            "firstName": "NIYIGABA",
+            "lastName": "Emmanuel",
+            "email": "nemmy59@gmail.com",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "+250783137121 ",
+            "nationalId": "1198180086106150",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-07 21:42:54",
+                "updatedAt": "2023-12-07 21:42:54",
+                "id": "dde2eb87-aae1-4f79-a5e8-b6d1841c7444",
+                "country": "RWANDA",
+                "province": "Northen",
+                "district": "Musanze",
+                "sector": "Cyuve",
+                "cell": "Rwebeya",
+                "village": "Nyarubande"
+            }
+        },
+        {
+            "createdAt": "2023-12-07 21:42:58",
+            "updatedAt": "2024-07-10 01:38:50",
+            "id": "d8ab3dac-cb58-4172-bb8e-8ef60ebfcde5",
+            "firstName": "NSHIMIYIMANA",
+            "lastName": "Jean de Dieu",
+            "email": "jeandedieunshimiyimana@gmail.com",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "0787072195",
+            "nationalId": "",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-07 21:42:58",
+                "updatedAt": "2023-12-07 21:42:58",
+                "id": "987d7451-651c-4691-8ce7-8b9d91013bfb",
+                "country": "RWANDA",
+                "province": "Southern",
+                "district": "HUYE",
+                "sector": "TUMBA",
+                "cell": "CYIMANA",
+                "village": "AKAMUHOZA"
+            }
+        },
+        {
+            "createdAt": "2023-12-07 21:42:59",
+            "updatedAt": "2024-07-10 01:39:14",
+            "id": "8b668b45-7390-4284-b4de-58cc82d02a6b",
+            "firstName": "MUKAMA",
+            "lastName": "Louis",
+            "email": "mukamalouis1@gmail.com",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "0783875713",
+            "nationalId": "",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-07 21:42:59",
+                "updatedAt": "2023-12-07 21:42:59",
+                "id": "83ec2ede-7d1e-4d99-bf9d-e2fdf53e57f4",
+                "country": "RWANDA",
+                "province": "Western",
+                "district": "Nyabihu",
+                "sector": "Mukamira",
+                "cell": "RUBAYA",
+                "village": "KARANDARYI"
+            }
+        },
+        {
+            "createdAt": "2023-12-07 21:42:52",
+            "updatedAt": "2023-12-16 12:47:19",
+            "id": "3dcaaa26-5990-41b3-96b2-15365c944978",
+            "firstName": "HABUMUGISHA",
+            "lastName": "Olivier",
+            "email": "hab1988olivier@gmail.com",
+            "lastLogin": null,
+            "gender": "MALE",
+            "phoneNumber": "0798782003",
+            "nationalId": "",
+            "visibility": "VISIBLE",
+            "status": "ACTIVE",
+            "address": {
+                "createdAt": "2023-12-07 21:42:52",
+                "updatedAt": "2023-12-07 21:42:52",
+                "id": "0fc5222c-71ec-4240-bce3-ace5103057ea",
+                "country": "RWANDA",
+                "province": "Southern",
+                "district": "Nyabihu",
+                "sector": "Mukamira",
+                "cell": "Jaba",
+                "village": "Rwankereri"
+            }
+        }
+    ]
+}

@@ -58,10 +58,10 @@
             <!-- Funding Goal vs. Actual Contributions Chart -->
             <canvas id="fundingGoalChart" class="w-full"></canvas>
         </div>
-        <div>
+        {% comment %} <div>
             <!-- Monthly Funding Activity Chart -->
             <canvas id="monthlyFundingChart" class="mb-8 w-full"></canvas>
-        </div>
+        </div> {% endcomment %}
     </div>
 </div>
 
@@ -99,7 +99,7 @@
         }
     );
 
-    const monthlyFundingData = {{ monthly_funding|safe }};
+    {% comment %} const monthlyFundingData = {{ monthly_funding|safe }};
     const monthlyLabels = monthlyFundingData.map(item => item.month);
     const monthlyData = monthlyFundingData.map(item => item.total);
 
@@ -126,7 +126,7 @@
                 }
             }
         }
-    );
+    ); {% endcomment %}
 
     const fundingGoalData = {{ funding_vs_goal|safe }};
     const goalLabels = fundingGoalData.map(item => item.campaign);

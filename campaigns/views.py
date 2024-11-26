@@ -5,11 +5,22 @@ from django.http import HttpResponseForbidden
 from .forms import CampaignForm, FundingForm
 from .models import Campaign
 from django.contrib import messages
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from .models import Campaign
+from .serializers import CampaignSerializer
 
 # List all campaigns
 def campaign_list(request):
     campaigns = Campaign.objects.all()
     return render(request, 'campaign_list.html', {'campaigns': campaigns})
+
+class CampaignListView(APIView):
+    def get(self, request):
+        campaigns = Campaign.objects.all()
+        serializer = CampaignSerializer(campaigns, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 # Create new campaign - only for Admin role
 @login_required
